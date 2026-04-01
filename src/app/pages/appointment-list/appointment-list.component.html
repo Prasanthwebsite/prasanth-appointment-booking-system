@@ -1,0 +1,231 @@
+<div class="row">
+  <div class="col-6">
+    <div class="row">
+
+      @for (item of appintmentList; track $index) {
+ <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{item.mobileNo}}</h6>
+            <p class="card-text">{{item.naration}}</p>
+            <a href="#" class="card-link">{{item.appointmentTime}}</a>
+            <a href="#" class="card-link text-success" *ngIf="loggedUserData.userName == 'superadmin'">{{item.hospitalName}}</a>
+          </div>
+        </div>
+      </div>
+
+      }
+
+     
+    </div>
+
+  </div>
+  <!-- <div class="col-4">
+
+    </div> -->
+
+
+
+  <!-- <div class="col-6">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="">
+          <div class="row g-0">
+          
+           
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Student registration form</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1m">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1n">Last name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1m1" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1m1">Mother's name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1n1" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1n1">Father's name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example8">Address</label>
+                </div>
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                  <h6 class="mb-0 me-4">Gender: </h6>
+
+                  <div class="form-check form-check-inline mb-0 me-4 ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                      value="option1" />
+                    <label class="form-check-label" for="femaleGender">Female</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                      value="option2" />
+                    <label class="form-check-label" for="maleGender">Male</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                      value="option3" />
+                    <label class="form-check-label" for="otherGender">Other</label>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <select data-mdb-select-init>
+                      <option value="1">State</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                      <option value="4">Option 3</option>
+                    </select>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <select data-mdb-select-init>
+                      <option value="1">City</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                      <option value="4">Option 3</option>
+                    </select>
+
+                  </div>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example9" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example9">DOB</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example90">Pincode</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example99" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example99">Course</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example97" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example97">Email ID</label>
+                </div>
+
+                <div class="d-flex justify-content-end pt-3">
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg">Reset all</button>
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Submit form</button>
+                </div>
+
+              </div>
+            </div>
+          
+        </div>
+      </div>
+  </div> -->
+
+
+
+  <div class=" col-4 container mt-5">
+    <form>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" [(ngModel)]="newAppintment.name" [(ngModel)]="newAppintment.name"
+            name="Name" ngModel placeholder="Enter Name" required>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <input type="number" class="form-control" [(ngModel)]="newAppintment.mobileNo" name="Moblieno" ngModel
+            placeholder="Enter Moblie No" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" [(ngModel)]="newAppintment.city" name="city" ngModel
+          placeholder="Enter City" required>
+      </div>
+
+      <div class="mb-3">
+        <input type="number" class="form-control" [(ngModel)]="newAppintment.age" name="age" ngModel
+          placeholder="Enter Age" required>
+      </div>
+
+
+      <div class="form-check">
+        <input class="form-check-input  form-control" [(ngModel)]="newAppintment.isFirstVisit" type="checkbox"
+          id="check2" checked name="isFirstVisit" ngModel>
+        <label class="form-check-label" for="check2">
+          It First Visit </label>
+      </div>
+      <!-- Date Picker -->
+      <div class="mb-3">
+        <input type="date" class="form-control" [(ngModel)]="newAppintment.appointmentDate" name="appointmentDate"
+          ngModel placeholder="Select Date">
+      </div>
+
+      <!-- Time Picker -->
+      <div class="mb-3">
+        <input type="time" class="form-control" [(ngModel)]="newAppintment.appointmentTime" name="time" ngModel>
+
+      </div>
+
+      <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+        <h6 class="mb-0 me-4">Gender: </h6>
+
+        <div class="form-check form-check-inline mb-0 me-4 ">
+          <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+            [(ngModel)]="newAppintment.gender" value="Female" />
+          <label class="form-check-label" for="femaleGender">Female</label>
+        </div>
+
+        <div class="form-check form-check-inline mb-0 me-4">
+          <input class="form-check-input" type="radio" name="gender" id="maleGender" [(ngModel)]="newAppintment.gender"
+            value="Male" />
+          <label class="form-check-label" for="maleGender">Male</label>
+        </div>
+
+      </div>
+      <!-- Phone -->
+      <div class="mb-3">
+        <input type="tel" class="form-control" [(ngModel)]="newAppintment.naration" name="naration" ngModel
+          placeholder="Enter Naration">
+      </div>
+
+      <button class="btn btn-primary w-100" (click)="bookAppointment()" type="button">
+        Booking Appointment
+      </button>
+
+    </form>
+  </div>
+</div>
